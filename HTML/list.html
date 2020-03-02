@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+	<style>
+		/*ul{
+			list-style-image:url('check-mark.png');	
+		}*/
+		li:first-child{
+			/*background-color: blue;*/
+			color: red;
+		}
+		li:last-child{
+			color: green;
+		}
+		li:nth-child(even){
+			color: orange;
+		}
+
+		dd::before{
+			content: "-";
+			margin-right: 5px;
+		}
+
+		dd::after{
+			content: ".";
+		}
+
+		dt::after{
+			content: " :"
+		}
+	</style>
+</head>
+<body>
+
+	<ol type="a" start="5">
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+		<li>Fourth</li>
+		<li>Fifth</li>
+	</ol>
+
+	<ul type="circle">
+		<li>Tea</li>
+		<li>Coffee</li>
+		<li>Milk</li>
+	</ul>
+
+	<ul style="list-style-image: url('check-mark.png');">
+		<li>Rose</li>
+		<li>lily</li>
+		<li>Lotus</li>
+		<li>Jasmine</li>
+		<li>Mogra</li>
+	</ul>
+
+	<dl>
+		<dt>Laptop</dt>
+		<dd>It is an electronic device</dd>
+
+		<dt>Mango</dt>
+		<dd>It is a fruit</dd>
+
+		<dt>Maruti</dt>
+		<dd>It is a car manufacturing company</dd>
+	</dl>
+
+
+
+	<!--There are 3 types of list.
+	1. Ordered List
+	2. Unordered List
+	3. Descriptive List
+
+	Different type: 1, a, A, i, I  
+
+	<dl> : Descriptive List
+	<dt> : Descriptive Term
+	<dd> : Description-->
+
+</body>
+</html>

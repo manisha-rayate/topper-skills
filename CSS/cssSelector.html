@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Selector</title>
+
+	<style>
+		
+		/* 1. element selector:Syntax
+		selector{
+			CSS declaration
+		}
+		e.g.
+		h1{
+			color: blue;
+		}
+		p{
+			color: red;
+		}
+		body{
+			background-color: grey;
+		}
+		-------------------------------------------------------------------------------------------*/
+
+		/* 2. wild selector: select all the elements of a web page.
+		syntax: *{
+			css declaration
+			}
+		e.g.
+		*{
+			color: red;
+		}
+		-------------------------------------------------------------------------------------------*/
+
+		/* 3. class selector:Syntax:
+		.className{
+			CSS declaration
+		}
+		e.g.
+		grouping selectors by comma
+		.para, .fsize{
+			text-align: center;
+		}
+		.para{
+			color: pink;
+		}
+		.fsize{
+			font-size: 20px;
+		}
+		-------------------------------------------------------------------------------------------*/
+
+		/*4. id selector:Syntax:
+		#idName{
+			CSS declaration
+			}
+		e.g.
+		#heading{
+			color:blue;
+		}
+		-------------------------------------------------------------------------------------------*/
+
+		/*5. attribute selector: Select the elements based on the attribute and attribute value.
+		syntax:
+		element[attribute]{
+			CSS declaration
+			} 
+		a[href]{
+		Select all the elements having href attribute
+			color:red;
+		}
+		a[href="https://www.google.com"]{
+		Select all the elements having value https://www.google.com
+			color: purple;
+		}
+		a[href ^="https"]{
+		Select all the elements having href value starting with https 
+			color: green;
+		}
+		a[href $="co.in"]{
+		Select all the elements having href value ends with co.in
+			color: orange;
+		}
+		a[href *="topperskills"]{
+			color: cyan;
+		}
+		a[href ~="topperskills"]{
+			color: red;
+		}
+		input[type="email"]{
+			select all the elements having type value is email
+			border: 2px solid red;
+		}
+		------------------------------------------------------------------------------------------*/
+
+		/*6.Pseudo selector:
+			i. Pseudo element selector:-(::)
+				- selects part of the element
+				- e.g. p::before{
+
+				}
+			ii. Pseudo class selector:- (:)
+				- selects an element based on its state
+				- e.g. a:visited{
+
+				}
+		Practicle session: i. Pseudo element selector:-
+
+		p::selection{
+			background-color: yellow;
+			color: green;
+		}
+		p::before{
+			content: "*";
+			color: red;
+			margin-right: 10px;
+		}
+		p::after{
+			content: ".";
+		}
+		p::first-letter{
+			text-transform: uppercase;
+			font-size: 30px;
+			color:red;
+		}
+		p::first-line{
+			color: red;
+		}
+		input::placeholder{
+			color: blue;
+		}
+		input[type="text"]::placeholder{
+			color: red;
+		}
+		-------------------------------------------------------------------------------------------*/
+		
+		/*Practicle session: ii. Pseudo class selector:-
+		unvisited:-
+
+		a:link{
+			color: orange;
+		}
+		a:visited{
+			color: green;
+		}
+		a:active{
+			color: #000;
+		}
+		a:hover{
+			color: yellow;
+		}
+		------------------------------------------------------------------------------------------*/
+
+		/*Child related selector
+
+		li:first-child{
+			color: red;
+		}
+		li:last-child{
+			color: green;
+		}
+		li:nth-child(2){
+			color: blue;
+		}
+		li:nth-last-child(2){
+			color: brown;
+		}
+		li:nth-child(odd){
+			color:green;
+		}
+		li:nth-child(even){
+			color: yellow;
+		}
+		-------------------------------------------------------------------------------------------*/
+
+		/*Pseudo class selector for table:-
+		tr:first-child{
+			background-color: purple;
+		}
+		tr:last-child{
+			background-color: blue;
+		}
+		tr:nth-child(odd){
+			background-color:green;
+		}
+		tr:nth-child(even){
+			background-color: yellow;
+		}
+		tr:not(:first-child){
+			background-color: orange;
+		}
+		tr:not(:nth-child(2)){
+			background-color: green;
+		}
+		-------------------------------------------------------------------------------------------*/
+
+		/*Pseudo class selector for form:-
+
+		input[type="text"]:required{
+			border: 2px solid red;
+		}
+		input[type="text"]:focus{
+			border: 2px solid blue;
+		}
+		input:valid{
+			border: 2px solid blue;
+		}
+		input:invalid{
+			border: 2px solid red;
+		}
+		input:in-range{
+			border-color: 2px solid green;
+		}
+		input:out-of-range{
+			border: 2px solid yellow;
+		}
+		-------------------------------------------------------------------------------------------*/
+		/*to create checkbox like a button*/
+		p{
+			display: none;
+		}
+		#ck{
+			display: none;
+		}
+		.btn{
+			background-color: green;
+			color: #fff;
+			padding:3px 8px; 
+		}
+		input[type="checkbox"]:checked + p{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+
+	<h1 class="para fsize">Topper Skills</h1>
+
+	<!-- <p>Sample para</p>
+	<p>Sample para</p>
+	<p class="para fsize">Sample para</p>
+	<p>Sample para</p>
+	<p class="para">Sample para</p>
+	<p id="heading">Sample para</p> -->
+
+	<h4 id="heading" class="para">Topper Skills, Pune.</h4>
+
+	<!-- <a>No Link</a><br>
+	<a href="https://www.google.com">Google.com</a>
+	<a href="http://www.google.com">http Google.com</a>
+	<a href="https://www.google.co.in">Google.co.in</a>
+
+	<a href="http://www. topperskills .com">Topper Skills</a><br><br> -->
+
+	<!-- Name: <input type="text" name="" placeholder="Enter the name"><br><br>
+	Email: <input type="email" name="" placeholder="Enter valid email-id"><br><br>
+	Password: <input type="password" name=""><br><br> -->
+
+	<p>sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text Sample text</p>
+
+	<a href="http://www.gmail.com">Click Here</a>
+
+	<ul>
+		<li>Zero</li>
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+		<li>Four</li>
+		<li>Five</li>
+		<li>Six</li>
+	</ul>
+
+	<table>
+		
+		<tr>
+			<th>First Name</th>
+			<th>Middle Name</th>
+			<th>Last Name</th>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>xyz</td>
+			<td>pqr</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>xyz</td>
+			<td>pqr</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>xyz</td>
+			<td>pqr</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>xyz</td>
+			<td>pqr</td>
+		</tr>
+		<tr>
+			<td>abc</td>
+			<td>xyz</td>
+			<td>pqr</td>
+		</tr>
+	</table>
+
+	<input type="text" name=""><br><br>
+	<input type="text" name="" required><br><br>
+	<input type="email" name=""><br><br>
+	<input type="text" name="" required><br><br>
+	<input type="number" max="10" min="5"><br><br>
+
+	<label for="ck" class="btn">Toggle</label>
+	<input type="checkbox" id="ck">
+	<p>Sample Para</p>
+</body>
+</html>
+
+<!-- ID and class difference
+	id                   								 class
+	#														.
+	higher priority										Lower priority
+	one element should have only single id            one element should have multiple class name.
+
+	Note: Css can be applied to multiple elements having same id using id selector.-->

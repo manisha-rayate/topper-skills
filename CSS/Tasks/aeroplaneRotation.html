@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aeroplane Rotation</title>
+
+	<style>
+		
+		@keyframes aeroplane{
+			0%{
+				top: 0;
+				left: 0;
+			}
+			25%{
+				top: 0;
+				left: 80%;
+				transform: rotate(90deg);
+			}
+			50%{
+				top: 80%;
+				left: 80%;
+				transform: rotate(90deg);
+			}
+			75%{
+				top: 80%;
+				left: 0;
+				transform: rotate(180deg);
+			}
+			100%{
+				top: 0;
+				left: 0;
+				transform: rotate(360deg);
+			}
+		}
+
+		div img{
+			width: 250px;
+			height: 200px;
+			position: absolute;
+			animation-name: aeroplane;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<img src="aeroplane.jpg">
+	</div>
+
+</body>
+</html>

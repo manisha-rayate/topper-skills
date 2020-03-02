@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Box Model</title>
+
+	<style>
+		h1{
+			/*border-width: 15px;
+			border-style: groove;
+			border-color: red;*/
+			border: 10px solid red;
+
+			/*border-top-width: 10px;
+			border-top-style: dashed;
+			border-top-color: red;
+
+			border-bottom: 10px dotted blue;
+
+			border-left: 5px solid yellow;
+
+			border-right: 8px double #000;*/
+
+			/*padding: all sides*/
+			padding: 10px;
+
+			/*
+			padding:top/bottom right/left 
+			padding:10px 20 px;
+
+			padding: top right/left bottom
+			padding: 10px 20px 30px;
+
+			padding: top right bottom left
+			padding:10px 20px 30px 40px;
+
+			*/
+			margin: 10px;
+
+			/*margin-top: 15px;
+			margin-right: 20px;
+			margin-bottom: 5px;
+			margin-left: 10px;*/
+
+		}
+
+		div{
+			background-color: cyan;
+			width: 200px;
+			height: 100px;
+			border: 5px solid blue;
+			margin-left: -100px;
+			transition: 2s;
+		}
+		div:hover{
+			margin-left: 0;
+		}
+
+		p{
+			border-left: 10px solid blue;
+			background-color: antiquewhite;
+		}
+		.sample{
+			background-color: red;
+			width: 200px;
+			height: 100px;
+			margin: 20px;
+			border: 10px dotted blue;
+			outline: 10px dashed green;
+			outline-offset: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Topper Skills</h1>
+
+	<div>Text</div>
+
+	<p>Note: this is a note</p>
+
+	<div class="sample"> outline & border difference</div>
+
+</body>
+</html>
+
+
+<!-- CSS Box Model :Border, padding, margin 
+1. Border :-  border is the property inside the element.
+	- width
+	- style : solid, dotted,dashed, double, inset, outset, ridge, groove
+	- color
+
+	border-radius :- used to make element's corner as rounded. 
+
+2. Padding :- padding values works in clockwise direction.
+	- added space inside the element.
+	- only take positive values for padding.
+
+3. Margin :- margin values works in clockwise direction.
+	- We can take margin values same as padding.
+	- added space outside the element.
+	- we can also take negative values for margin. 
+
+outline property: outline is the property outside yhe element.
+ -->

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Position Property</title>
+
+	<style>
+	
+		/*.parent{
+			position: relative;
+		}*/	
+		/*.parent div{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			position: relative;
+			top: 100px;
+		}*/
+		div{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 100px;
+		}
+		.first{
+			background-color: red;
+			z-index: 1;
+		}
+		.second{
+			background-color: blue;
+			top: 50px;
+			left: 50px;
+			z-index: 999999;
+		}
+		.third{
+			background-color: green;
+			top: 100px;
+			left: 100px;
+		}
+		.fix{
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+			position: fixed;
+			right: 0;
+			bottom: 0;
+		}
+		.stick{
+			height: 200px;
+			width: 200px;
+			background-color: grey;
+			position: sticky;
+			top: 0;
+			bottom: 0;
+		}
+
+
+
+		/*
+		z-index:- change the overlapping order.
+			- we can give +ve or -ve values for z-index.
+			- it is used when the element is always display on front.
+			- we can also give max value( e.g 99999) to keep element display on front.  */
+	</style>
+</head>
+<body>
+
+	<h1>Topper Skills</h1>
+	
+	<!-- <div class="parent">
+	<div></div>
+
+	</div> -->
+	
+	<div class="first"></div>
+	<div class="second"></div>
+	<div class="third"></div>
+
+	<div class="rel">relative</div>
+
+	<p>Sample Para</p>
+	<div class="fix"></div>
+
+	<div class="stick"></div>
+</body>
+</html>
+
+<!-- Position Property;
+	-1. Static(default)
+	-2. relative:- move the element from its current position.
+		- relative holds its space and then move the element.  
+	-3. absolute:- move the element from its relative parent or directly body
+		- if parent element position is always relative and the child element position is always absolute then starts the movement from parent element otherwisw start from body.
+		- for overlapping only use absolute position.
+		- absolute can't hold its space.
+	-4. fixed:- if the position of element is fixed then the element can't move whenever the webpage is scroll up or down. 
+		- it holds it's space.
+	-5. sticky:- combition of relative and fixed
+		- it will used in menu bar, menu can't hide only content is moved. -->

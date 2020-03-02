@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Row & Col Span Task</title>
+	<style>
+		table,th,td{
+			border: 1px solid #000;
+			border-collapse: collapse;
+			text-align: center;
+		}
+
+		.row1{
+			background-color: #94DD79;
+		}
+		.row2{
+			height: 55px;
+			background-color: #FFCC99;
+		}
+		.row3{
+			background-color: #FF0000 ;
+		}
+		.row4{
+			background-color: #fec13a;
+		}
+		.row5{
+			background-color: #0033FF; 
+		}
+		.row6{
+			height: 80px;
+			background-color: #ff3333;
+		}
+		.row7{
+			background-color: #9370DB;
+		}
+		.row8{
+			height: 80px;
+			background-color: #DDA0DD;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>Row & Col Span</caption>
+		<tr class="row1">
+			<th>Row 1</th>
+			<th></th>
+			<th colspan="2">ColumnSpan="2"</th>
+			<th colspan="2">ColumnSpan="2"</th>
+		</tr>
+		<tr class="row2">
+			<td>Row 2</td>
+			<td></td>
+			<td rowspan="3" colspan="2">RowSpan="3" <br> ColumnSpan="2"</td>
+			<td rowspan="5" colspan="2">RowSpan="5" ColumnSpan="2"</td>
+		</tr>
+		<tr class="row3">
+			<td>Row 3</td>
+			<td></td>
+		</tr>
+		<tr class="row4">
+			<td>Row 4</td>
+			<td rowspan="5">RowSpan="5"</td>
+		</tr>
+		<tr class="row5">
+			<td>Row 5</td>
+			<td colspan="2">ColumnSpan="2"</td>
+		</tr>
+		<tr class="row6">
+			<td>Row 6</td>
+			<td colspan="2">ColumnSpan="2"</td>
+		</tr>
+		<tr class="row7">
+			<td>Row 7</td>
+			<td></td>
+			<td colspan="2">ColumnSpan="2"</td>
+			<td></td>
+		</tr>
+		<tr class="row8">
+			<td>Row 8</td>
+			<td></td>
+			<td colspan="2">ColumnSpan="2"</td>
+			<td></td>
+		</tr>
+	</table>
+
+</body>
+</html>

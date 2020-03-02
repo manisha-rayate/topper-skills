@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Table </title>
+
+	<style>
+		
+		table, th, td{
+			border: 1px solid #000;
+			border-collapse: collapse;
+			padding: 3px 8px;
+			text-align: center;
+		}
+		tr:nth-child(even){
+			background-color: #ccc;
+		}
+		tr:hover{
+			/*background-color: blue;*/
+			background-color: rgba(0,0,255,.6);  /*a:- alpha used for color transferancy.*/
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>Customer List</caption>
+		<!-- heading -->
+		<tr style = "background-color: blue">
+			<th>Sr.No.</th>
+			<th>Name</th>
+			<th colspan="2">Mobile</th>
+			<!-- <th>Al Mobile</th> -->
+			<th>City</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<td>Nasik</td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<td>Nasik</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<td>Nasik</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<td>Nasik</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<td>Nasik</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<td rowspan="2">Nasik</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>abc</td>
+			<td>1111</td>
+			<td>2222</td>
+			<!-- <td>Nasik</td> -->
+		</tr>
+
+	</table>
+<!-- Table:- To display information in tabular form.
+- Table should not be used to create web page layout, tables are not good for
+<thead>,<tbody> both are optional.
+	<th> :-table head, <td>:- Table data, <tr>:- Table row
+		<colspan> :- We can merge 2 or more columns,
+			<rowspan> :- We can merge 2 or more rows.
+	-->
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Query Selector</title>
+</head>
+<body>
+	<div>
+		<p>para</p>
+	</div>
+
+	<h2>Topper Skills</h2>
+
+	<ul>
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+	</ul>
+
+
+	<script>
+		
+		// var p = document.querySelector('p');
+
+		// p.parentNode.nextElementSibling.style.color = "red";
+
+		var ul = document.querySelector('ul');
+
+		ul.firstElementChild.style.color = "blue";
+		ul.lastElementChild.style.color = "green";
+
+		console.log(ul.childElementCount);
+		console.log(ul.children);
+
+	</script>
+	
+</body>
+</html>
+
+<!-- parentNode :- return the parent node
+
+nextSibling :- return the next sibling node( text or element node )
+
+nextElementSibling :- returns the next element sibling node ( text nodes are ignored)
+
+previousSibling :- returns the previous sibling node ( text or element node )
+
+previousElementSibling :- returns the previous element sibling node ( text nodes are ignored)
+
+childNodes :- returns a node list having all the child nodes ( text and element nodes)
+
+children :- returns a HTML collection ( list ) of child element nodes ( text nodes are ignored)
+
+firstElementChild :- returns a first element child node( text nodes are ignored)
+
+lastElementChild :- returns a last element child node( text nodes are ignored)
+
+childElementCount :- returns total number of child element nodes -->

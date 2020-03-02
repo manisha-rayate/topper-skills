@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Events</title>
+</head>
+<body>
+
+	<!-- <div>
+		div
+		<p>Para</p>
+	</div> -->
+	<!-- ----------------------------------------------------------- -->
+	
+	<!-- <div style="height: 200px;">
+		
+	</div> -->
+	
+	<!-- ---------------------------------------------------------------- -->
+
+	<!-- <div onclick="message()">
+		div
+	</div> -->
+
+	<!-- ------------------------------------------------------------------ -->
+	
+	<!-- add city to dropdown -->
+	<label>Enter City :</label>
+	<input type="text" id="cityInp">
+	<br><br>
+	<button onclick="addCity()">Add City</button>
+	<br><br>
+	<select>
+		<option>--- Select ---</option>
+	</select>
+	<script>
+		
+		var div = document.querySelector('div');
+
+		var p = document.querySelector('p');
+
+		// function divClicked()
+		// {
+		// 	console.log(" div Clicked...");
+		// }
+
+		// function pClicked()
+		// {
+		// 	console.log(" p Clicked...");
+		// }
+
+		// div.addEventListener('click', divClicked, true); // true is used to enable capturing phase.
+		// p.addEventListener('click', pClicked);
+		// ------------------------------------------------------------------------------------------
+
+		// altarnate solution :-short code
+
+		// div.addEventListener('click',function(){
+		// 								console.log(" div Clicked...");
+		// 							} , true);
+
+		// p.addEventListener('click',function(){
+		// 								console.log(" p Clicked...");
+		// 							} );
+		//------------------------------------------------------------------------------------------
+
+		// to print e object
+		// p.addEventListener('click', function(e){
+		// 	console.log(" p clicked...");
+		// 	console.log(e);
+		// 	console.log(e.target);
+		// 	console.log(p);
+		// });
+		//-----------------------------------------------------------------------------------------
+
+		// to change div background color while mouse moving.
+
+		// div.addEventListener('mousemove', function(e) {
+		// 					//	console.log(e);
+
+		// 						var x = e.clientX;
+		// 						var y = e. clientY;
+
+		// 						div.style.backgroundColor = "rgb("+x+", 100, "+y+")";
+		// });
+		//------------------------------------------------------------------------------------------
+	
+		// onclick event demo
+
+		// function message(){
+		// 	alert("Welcome");
+		// }
+		//-----------------------------------------------------------------------------------------
+	
+		function addCity()
+		{
+			var input = document.querySelector("#cityInp");
+			var select = document.querySelector("select");
+			var option = document.createElement("option");
+
+			option.textContent = input.value;
+
+			select.appendChild(option);
+
+			input.value = ""; // to clear input after adding city
+		}
+	</script>
+</body>
+</html>
+
+<!-- DOM Events :-
+ 
+ event :- an action / activity done at a particular time is called an event.
+
+ There are two categories of events :- 
+
+ 1. browser event :- the events which are triggered by the web browser are called browser event.
+ 	e.g. onload
+
+ 2. user event :- the events which are triggered by the user are called browser event.
+ 	e.g. click, change, mousemove
+
+ event propagation 
+
+ propagation phases -->

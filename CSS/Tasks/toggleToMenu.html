@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Toggle to Display Menu</title>
+
+	<style>
+		
+		body{
+			padding: 15px 15px;
+			margin: 100px 100px;
+		}
+		#checkBtn{
+			display: none;
+		}
+		.btn{
+			background-color: green;
+			color: #fff;
+			padding:20px 20px;
+		}
+		.menu{
+			list-style-type: none;
+			display: none;
+		}
+		li a{
+			text-decoration: none;
+			background-color: orange;
+		}
+		input[type="checkbox"]:checked + ul{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+
+	<label for="checkBtn" class="btn">Toggle</label>
+	<input type="checkbox" id="checkBtn">
+	<ul class="menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Services</a></li>
+		<li><a href="#">Product</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+
+</body>
+</html>

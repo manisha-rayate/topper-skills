@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Table Action</title>
+
+	<style>
+		
+		table, th, td{
+			border: 1px solid #000;
+			border-collapse: collapse;
+			padding: 5px 10px;
+			text-align: center;
+		}
+		input{
+			text-align: center;
+			border: none;
+		}
+		input:focus{
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+
+	<table id="mytable">
+
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>City</th>
+			<th>Action</th>
+		</tr>
+
+		<tr>
+			<td>
+				<input type="number" id="idInp">
+			</td>
+			<td>
+				<input type="text" id="nameInp">
+			</td>
+			<td>
+				<input type="text" id="cityInp">
+			</td>
+			<td>
+				<button onclick="addRecord()">ADD</button>
+			</td>
+		</tr>
+	</table>
+
+
+	<script>
+		
+		//var table = document.querySelector("#mytable");
+		
+		function addRecord()
+		{
+			var table = document.querySelector("#mytable");
+
+			var idInp = document.querySelector("#idInp").value;
+			var nameInp = document.querySelector("#nameInp").value;
+			var cityInp = document.querySelector("#cityInp").value;
+
+			//console.log(idInp);
+
+			var row = table.insertRow();
+
+			var idCell = row.insertCell(0);
+			var nameCell = row.insertCell(1);
+			var cityCell = row.insertCell(2);
+			var deleteCell = row.insertCell(3);
+
+			idCell.textContent = idInp;
+			nameCell.textContent = nameInp;
+			cityCell.textContent = cityInp;
+
+			//deleteCell.innerHTML = "<button onclick='removeRecord()'>Delete</button>";
+
+			var delbutton = document.createElement("button");
+
+			delbutton.addEventListener('click',function(e) {
+														//table.removeChild(row);
+
+														 table.deleteRow(e.target.parentNode.parentNode.rowIndex);
+														});
+			//add label to the button
+			delbutton.textContent = "Delete";
+			
+			// add delete button to the column
+			deleteCell.appendChild(delbutton);
+		}
+
+	</script>
+</body>
+</html>

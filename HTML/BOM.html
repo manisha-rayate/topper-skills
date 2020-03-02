@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popups</title>
+</head>
+<body>
+
+	<script>
+		// internally called all popups like window.popupName. E.g. window.alert("message");
+
+		//alert("There is an Error!");
+		//------------------------------------------------------------------------------
+
+		// var decision = confirm("Do you want delete the record?");
+
+		// if(decision)
+		// 	alert("Record deleted...");
+		// else
+		// 	alert("Record not deleted...");
+		//----------------------------------------------------------------------------------
+
+		// var city = prompt("Enter your city");
+	
+		// if(city)
+		// 	alert("Your city is " +city);
+		//---------------------------------------------------------------------------------
+
+		// to detect internet connection of our PC 
+
+		window.addEventListner('online',function(){
+									alert("Internet id Back.");
+		});
+
+		window.addEventListner('offline',function(){
+									alert("No Internet");
+		});
+
+		if(navigator.onLine)
+			alert("This will get executed only if there is active internet connection");
+		else
+			alert("This will get executed only if there is no active internet connection");
+	</script>
+
+</body>
+</html>

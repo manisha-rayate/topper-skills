@@ -1,0 +1,17 @@
+ul{
+  list-style: none;
+  max-width: 250px;
+}
+
+.link{
+  display: inline-block;
+  background-color: aqua;
+  color: black;
+  padding: 3px 8px;
+  width: 100%;
+  text-decoration: none;
+}
+
+li{
+  margin-top: 1px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Storage</title>
+</head>
+<body>
+	<!-- Web Storage -->
+<!-- 
+	<button onclick="addcity()">Add City</button>
+	<button onclick="showCity()"> Show City</button>
+
+	<script>
+	
+	function addcity()
+	{
+		localStorage.setItem("city","Pune");
+		sessionStorage.setItem("city","Nashik");
+	}
+
+	function showCity()
+	{
+		var c = localStorage.getItem("city");
+		alert(c);
+
+		var s = sessionStorage.getItem("city");
+		alert(s);
+	}
+	</script>
+	-------------------------------------------------------------------------------------------- -->
+
+	<!-- take input and add item to web storage -->
+<!-- 
+	<label>Enter City:</label>
+	<input type="text" id="city">
+	<br><br>
+
+	<button onclick="addCity()">Add City</button>
+	<br><br>
+
+	<button onclick="showCity()">Show City</button>
+
+	<script>
+		
+		function addCity()
+		{
+			var city = document.querySelector("#city").value;
+			localStorage.setItem("city",city);
+
+			// localStorage.getItem("city", document.querySelector("#city").value);
+		}
+
+		function showCity()
+		{
+			var c = localStorage.getItem("city");
+			alert(c);
+
+			// alert(localStorage.getItem("city"));
+		}
+	</script>
+	----------------------------------------------------------------------------------------- -->
+
+	<!-- JavaScript object to JSON object conversion -->
+
+	<script>
+	
+		var jsObj = {
+			name : "abc",
+			mobile : ["1111111", "22222222"],
+			address : {
+				street : "Narhe",
+				city : "Pune"
+			},
+			age : "10",
+			profile : function(){
+				alert("Hiii...");
+			}
+		}
+
+		// Javascript to JSON conversion
+
+		var jsonObj = JSON.stringify(jsObj);
+		console.log(jsonObj);
+
+		// JSON to Javascript conversion
+
+		var js = JSON.parse(jsonObj);
+		console.log(js.name);
+
+	</script>
+</body>
+</html>

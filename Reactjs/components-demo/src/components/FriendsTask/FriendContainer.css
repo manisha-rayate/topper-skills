@@ -1,0 +1,16 @@
+.row{
+  display: flex;
+}
+
+.menu{
+  display: inline-block;
+  max-width: 30vw;
+  margin-right: 3vw;
+}
+
+.content{
+  display: inline-block;
+  width: 65vw;
+  border: 1px solid black;
+  
+}

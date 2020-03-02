@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Element</title>
+</head>
+<body>
+	<!-- form : to take user inputs-->
+<form action="contact.php" method="post">
+
+	<label for="uname">Name</label>
+	<input type="text" id="uname" required placeholder="Enter Name">
+	<br><br>
+
+	<fieldset>
+		<legend>Contact : </legend>
+
+		<label for="mail">Email</label>
+		<input type="email" name="mail" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+		<br><br>
+
+		<label for="mobile">Mobile</label>
+		<input type="tel" name="mobile" pattern="[0-9]{10}" value="8149348515" readonly disabled>
+		
+	</fieldset>
+
+	<br><br>
+
+	<label>Gender</label>
+	<input type="radio" name="gender" id="male"><label for="male">Male</label>
+	<input type="radio" name="gender" id="female"><label for="female">Female</label>
+	<br><br>
+	<!-- For selecting only one value under radio type to give same name for all radio type -->
+
+	<label>DOB</label>
+	<input type="date" min="1991-01-01" max="2019-12-01">
+	<br><br>
+
+	<label>Password</label>
+	<input type="Password" name="">
+	<br><br>
+
+	<label>Time</label>
+	<input type="time" name="">
+	<br><br>
+
+	<label>Resume</label>
+	<input type="file" name="" accept=".png,.jpg">
+	<br><br>
+
+	<label>Budget</label>
+	<input type="range" name="">
+	<br><br>
+
+	<label>Price</label>
+	<input type="number" min="1" max="5">
+	<br><br>
+
+	<label>Theme</label>
+	<input type="color" name="">
+	<br><br>
+
+	<label>City*</label>
+	<select name="city" multiple size="1">
+		<option value="Pune">Pune</option>
+		<option value="Mumbai">Mumbai</option>
+		<option selected>Nashik</option>
+		<option>Delhi</option>
+		<option>Satara</option>
+	</select>
+	<br><br>
+
+	<input type="datalist" list="cities">
+
+	<datalist id="cities">
+		<option value="abc">Pune</option>
+		<option value="Mumbai">Mumbai</option>
+		<option>Nashik</option>
+		<option>Delhi</option>
+		<option>Satara</option>
+	</datalist>
+	<br><br>
+
+	<legend>Textarea</legend>
+	<textarea rows="10" cols="30"></textarea>
+	<br><br>
+
+	<input type="checkbox" name=""> I agree terms
+	<br><br>
+
+	<input type="submit" value="Submit">
+	<input type="reset" value="Reset">	
+</form>
+<!-- datalist: used to search and select the values. alternate solution for dropdown.
+checkbox: used for confirmation 
+ -->
+
+
+</body>
+</html>

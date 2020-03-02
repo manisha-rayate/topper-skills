@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Combinators</title>
+
+	<style>
+		
+		/*Select all the span elements inside the div elements
+		div span{
+			color: orange;
+		}
+		--------------------------------------------------------------------------------------------*/
+
+		/*Select all the span elements which are direct child of the div elements.
+		div > span{
+			color:orange;
+		}
+		--------------------------------------------------------------------------------------------*/
+		
+		/*Select span element inside p element
+		div > p > span{
+			color: green;
+		}
+		--------------------------------------------------------------------------------------------*/
+		
+		/*Select the span element which is immediate sibling of the div element
+		div + span{
+			color: red;
+		}
+		--------------------------------------------------------------------------------------------*/
+
+		/*Select all span elements which are after div element*/
+		div ~ span{
+			color: yellow;
+		} 
+	</style>
+</head>
+<body>
+
+	<span>external span</span>
+	<span>external span</span>
+
+	<div>
+		my div
+		<p>my para
+			<span>inner span</span>
+		</p>
+
+		<span>outer span</span>
+	</div>
+
+	<span>external span</span>
+	<span>external span</span>
+	<span>external span</span>
+
+</body>
+</html>

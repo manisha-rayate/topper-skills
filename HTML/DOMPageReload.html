@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popups</title>
+</head>
+<body>
+
+	<!-- Reloading / refreshing the web page -->
+<!-- 
+	<button onclick="refresh()">Refresh</button>
+
+	<script>
+		
+		function refresh()
+		{
+			// Page refreshing
+			// location.reload();
+
+			// alert (location.href);
+
+			location.href =  "http://www.google.com";
+		}
+
+	</script>
+----------------------------------------------------------------------------------------------- -->
+
+	<!-- <button onclick="previous()">Back</button>
+	<button onclick="next()"> Forward</button>
+
+	<a href="BOM.html">BOM</a>
+	<script>
+		
+		function previous()
+		{
+			window.history.back();
+		}
+
+		function next()
+		{
+			window.history.forward();
+		}
+
+	</script>
+	------------------------------------------------------------------------------------------- -->
+
+	<!-- Geolocation :- It gives the location of the user, it is a HTML 5 API. -->
+
+	<!-- latitude
+	longitude -->
+
+	<!-- <script>
+		
+		// window.navigator.geolocation;
+
+		if(window.navigator.geolocation)
+		{
+			alert("Geolocation is enabled.");
+
+			navigator.geolocation.getCurrentPosition(function(position)
+			{
+				console.log(position);
+				console.log(position.coords);
+				console.log(position.coords.latitude);
+				console.log(position.coords.longitude);
+			})
+		}
+		else
+		{
+			alert("Geolocation is disabled.");
+		}
+
+	</script>
+	-------------------------------------------------------------------------------------------- -->
+
+	<script>
+		
+		function success(position)
+		{
+			console.log(position);
+			console.log(position.coords);
+			console.log(position.coords.latitude);
+			console.log(position.coords.longitude);
+		}
+
+		function error(err)
+		{
+			alert("User did not allowed location acccess");
+		}
+		if(window.navigator.geolocation)
+		{
+			navigator.geolocation.getCurrentPosition(success,error);
+		}
+		else
+		{
+			alert("Geolocation is disabled.");
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<!-- <h1 class="para">Heading</h1>
+	<p>para</p>
+	<p id="para">para</p>
+	<p>para</p> 
+	-------------------------------------------------------------->
+	<h1 class="para">Heading</h1>
+	<p>para</p>
+	<p class="para">para</p>
+	<p>para</p>
+
+ 	<!-- -----------------------------------------------------------------------------
+ 	<h1 name="para">Heading</h1>
+	<p>para</p>
+	<p name="para">para</p>
+	<p name="para">para</p>
+	------------------------------------------------------------------------- -->
+
+	 <!-- <form></form>
+	<form></form>
+	<form></form>
+	<form></form>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+	<a href="">link</a>
+
+	<div><p>Para</p></div>
+	<h2 title="" tabindex="">Heading</h2>
+	<script>
+		// document.getElementById('para').style.color = "red";
+		//----------------------------------------------------------------------------
+		// var h1list = document.getElementsByTagName('p');
+
+		// console.log(h1list[1]);
+		// console.log(h1list.length);
+
+		// for(var i = 0; i < h1list.length; i++)
+		// {
+		// 	h1list[i].style.color = "red";
+		// }
+
+		// for(var node of h1list)
+		// {
+		// 	node.style.color = "blue";
+		// }
+		//-----------------------------------------------------------------------------
+		var h1list = document.getElementsByClassName('para');
+			console.log(h1list[1]);
+		console.log(h1list.length);
+
+		for(var i = 0; i < h1list.length; i++)
+		{
+			h1list[i].style.color = "purple";
+		}
+
+		//----------------------------------------------------------------------------
+
+		// var h1list = document.getElementsByName('para');
+		// console.log(h1list[1]);
+		// console.log(h1list.length);
+
+		// for(var i = 0; i < h1list.length; i++)
+		// {
+		// 	h1list[i].style.color = "green";
+		// }
+		//------------------------------------------------------------------------------
+
+		// console.log(document);
+		// console.log(document.URL);     // to access current webpage path
+		// console.log(document.body);
+		// document.body.style.backgroundColor = "cyan";
+		// document.links[1].style.color = "red";
+		// document.title = "My title";
+	</script>
+</body>
+</html>

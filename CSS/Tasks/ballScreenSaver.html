@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ball Screen Saver</title>
+
+	<style>
+		
+		@keyframes red{
+			0%{ 
+				left: 0; 
+				top: 20%;
+		    }
+			30%{
+				left: 50%;
+				top: 0;
+			}
+			60%{
+				left: 95%;
+				top: 45%;
+			}
+			100%{
+				left: 30%;
+				top: 100%;
+			}
+		}
+		@keyframes blue{
+			0%{
+				left: 30%;
+				top: 0;
+			}
+			25%{
+				left: 50%;
+				top: 90%
+			}
+			50%{
+				left: 0;
+				top: 60%
+			}
+			75%{
+				left: 45%;
+				top: 0;
+			}
+			100%{
+				left: 100%;
+				top: 70%;
+			}
+		}
+		@keyframes green{
+			0%{
+				left: 0;
+				top: 90%;
+			}
+			25%{
+				left: 20%;
+				top: 0;
+			}
+			50%{
+				left: 90%;
+				top: 30%;
+			}
+			75%{
+				left: 67%;
+				top: 90%;
+			}
+			100%{
+				left: 0;
+				top: 0;
+			}
+		}
+		@keyframes orange{
+			0%{
+				left: 90%;
+				top: 55%;
+			}
+			25%{
+				left: 0;
+				top: 70%
+			}
+			50%{
+				left: 45%;
+				top: 90%
+			}
+			75%{
+				left: 25%;
+				top: 0;
+			}
+			100%{
+				left: 100%;
+				top: 100%;
+			}
+		}
+		@keyframes purple{
+			0%{
+				left: 27%;
+				top: 90%;
+			}
+			20%{
+				left: 40%;
+				top: 0;
+			}
+			35%{
+				left: 50;
+				top: 90%
+			}
+			55%{
+				left: 65%;
+				top: 0;
+			}
+			75%{
+				left: 90%;
+				top: 66%;
+			}
+			100%{
+				left: 0;
+				top: 20%;
+			}
+
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			position: absolute;
+		}
+		.red{
+			background-color: red;
+			animation-name: red;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		.blue{
+			background-color: blue;
+			animation-name: blue;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		.green{
+			background-color: green;
+			animation-name: green;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		.orange{
+			background-color: orange;
+			animation-name: orange;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+		.purple{
+			background-color: purple;
+			animation-name: purple;
+			animation-duration: 5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="red"></div>
+	<div class="blue"></div>
+	<div class="green"></div>
+	<div class="orange"></div>
+	<div class="purple"></div>
+
+</body>
+</html>

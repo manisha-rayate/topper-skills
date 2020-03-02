@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Event Propagation</title>
+</head>
+<body>
+
+<!-- Event Propagation:-
+	
+	<div>div
+		<p>Para</p>
+	</div>
+
+
+	<script>
+		var div = document.querySelector("div");
+		var p = document.querySelector("p");
+
+		div.addEventListener('click',function(e){
+								console.log("div clicked...");
+		});
+
+		p.addEventListener('click',function(e){
+								console.log("p 1 clicked...");
+								//e.stopPropagation();
+								e.stopImmediatePropagation();    // stop immediate propagation of node p,only return one node
+		});
+
+		p.addEventListener('click',function(e){
+								console.log("p 2 clicked...");
+								e.stopPropagation();    // stop parent node propagtion,only return current node.
+		});
+	</script>
+	------------------------------------------------------------------------------------------- -->
+
+<!-- preventdefault() :-
+
+	<a href="http://www.topperskills.com">Topper Skills</a>
+
+
+	<script>
+
+	// preventDefault is can't load the href link, only display the message.  		
+		
+		var a = document.querySelector("a");
+
+		a.addEventListener('click',function(e){
+								e.preventDefault();
+								console.log("a clicked...");
+		});
+
+	</script>
+  -------------------------------------------------------------------------------------------- -->
+  
+ <!--  Event Deligation :- add events on number of elements.
+
+  <ul>
+
+  	<li>Event Deligation </li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  	<li>First</li>
+  
+  </ul>
+
+  <script>
+
+  	var ul = document.querySelector("ul");
+
+  	ul.addEventListener('click', function(e){
+  							e.target.style.color = "green";
+  	});
+
+  </script> 
+-->
+
+</body>
+</html>

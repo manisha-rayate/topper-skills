@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Naukri Registration Form</title> 
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="//static.naukimg.com/s/5/104/c/common_v3.min.css" rel="stylesheet">
+
+	<style>
+		
+		*{
+			box-sizing: border-box;
+		}
+		div{
+			display: block;
+		}
+		body, form, div, span, label{
+			margin: 0;
+    		padding: 0;
+    		border: 0;
+    		font: inherit;
+    		width: 100%;
+    		vertical-align: baseline;
+		}
+		header .top_Logo{
+			padding-top: 34px;
+			/*margin-left: 150px;
+			margin-right: 150px;*/
+			color: #707070;
+			height: 90px;
+      width: 990px;
+      margin: auto;
+		}
+    header .top_Logo .nLogo{
+      width: 237px;
+      float: left;
+    }
+		header .top_Logo p {
+			float: right;
+			width: auto;
+      max-width: 400px;
+      word-break: break-all;
+			/*margin-top: -10px;*/
+		}
+		.loginLink{
+			color: #27A7D4;
+			text-decoration: none;
+			line-height: -1.4;
+		}
+		.per{
+			background-image: url("naukri.jpg");
+			height: 60px;
+			text-align: center;
+			color: #fff;
+			display: block;
+		}
+		.menu{
+			list-style: none;
+			padding-top: 17px;
+			font-size: 20px;
+		}
+		.menu li{
+			display: inline-block;
+			text-align: center;
+		}
+		.menu li em {
+			width: 120px;
+			height: 3px;
+			margin: 11px; 
+			display: block;
+			background-color: #fff;
+		}
+		.menu .active~li em{
+			height: 2px;
+			opacity: .5;
+		}
+		.menu .active~li div{
+			opacity: .5;
+			font-weight: 100;
+		}
+		.details{
+			/*margin: 10px;*/
+			    position: relative;
+    			min-height: 500px;
+		}
+		.row{
+			margin-bottom: 20px;
+		}
+		.row::after, .row::before{
+    		display: table;
+    		content: "";
+    		line-height: 0;
+		}
+		.row::after {
+			clear: both;
+		}
+		.row .left{
+			width: 26%;
+			text-align: right;
+			float: left;
+			padding-right: 15px;
+		}
+		.row .left{
+			padding: 10px 0;
+			font-weight: 400;
+			color: #707070; 
+		}
+		.mandatory::after {
+			content: "*";
+			color: #ED2D2C;
+		}
+ 		.row .middle{
+			width: 47%;
+    		text-align: left;
+    		float: left;
+		}
+		.mail .suggest{
+			height: 41px;
+		}
+		.error .suggest{
+			color: red;
+		}
+		.suggest{
+			background-color: #fff;
+			border: 1px solid #DFDFDF;
+			display: block;
+		}
+		.error .errspan{
+			display: block;
+		}
+		.errspan{
+			color: red;
+			font-size: 12px;
+    		margin-top: 5px;
+    		display: block;
+		}
+		.break{
+			word-break: break-all;
+		}
+		.pass{
+			position: relative;
+		}
+		.err input{
+			color: red;
+			outline: 0;
+		}
+		.hidepwd{
+			top: 0;
+    		color: #707070;
+    		padding: 10px 5px;
+    		right: 1px;
+    		position: absolute;
+		}
+		a{
+			text-decoration: none;
+		}
+		.ddwn .DDwrap .DDsearch input, input{
+			border: 1px solid #DFDFDF;
+    		padding: 10px;
+   			width: 100%;
+    		font-size: 100%;
+		}
+		input{
+			font-family: inherit;
+    		/*font-size: inherit;*/
+    		font-weight: inherit;
+		}
+		.input .code{
+			width: 12%;
+    		float: left;
+    		text-align: center;
+		}
+		.input .mobile{
+			width: 88%;
+    		float: left;
+    		border-left: 0;
+		}
+		.clrfix{
+			clear: both;
+		}
+		.ddwn{
+			position: relative;
+    		display: inline-block;
+		}
+		ul{
+			list-style: none;
+		}
+		ul, ul li{
+			margin: 0;
+    		padding: 0;
+		}
+		.ddwn .DDwrap .DDsearch .DDinputWrap {
+    		position: relative;
+		}
+		.ddIcon{
+			position: absolute;
+    		display: inline-block;
+    		right: 12px;
+    		top: 12px;
+    		width: 15px;
+    		height: 12px;
+		}
+		.info{
+			color: #A7A7A7;
+    		font-size: 13px;
+    		margin-top: 5px;
+		}
+		.customchkbox{
+			opacity: 2;
+    		position: absolute;
+		}
+		.customchkboxlbl{
+			position: relative;
+    		display: inline-block;
+    		width: auto;
+		}
+		.customchkbox .customchkboxlbl::before {
+			content: '';
+    		background: url(../i/iconSprites.png) no-repeat;
+    		display: inline-block;
+    		float: left;
+    		vertical-align: middle;
+   			width: 15px;
+    		height: 15px;
+    		margin-right: 0px;
+    		text-align: center;
+		}
+		.uploadBtnCont {
+    		position: relative;
+		}
+		.uploadBtn .primary-btn{
+    		color: #FFF;
+    		border: none;
+    		display: inline-block;
+    		font-weight: 400;
+    		line-height: 1.42857143;
+    		overflow: hidden;
+    		cursor: pointer;
+    		vertical-align: middle;
+    		text-align: center;
+    		outline: 0;
+		}
+		.uploadBtn {
+    		background-color: #1BBC9B;
+    		padding: 10px 25px;
+    		width: 165px;
+    		font-size: 15px;
+    		text-overflow: ellipsis;
+    		white-space: nowrap;
+		}
+		.uploadCV {
+    		opacity: 0;
+    		position: absolute;
+    		left: 0;
+    		top: 0;
+    		width: 165px;
+    		height: 42px;
+    		overflow: hidden;
+		}
+		.uploadCV input[type=file] {
+    		width: 165px;
+    		height: 42px;
+    		cursor: pointer;
+    		font-size: 0;
+    		top: -5px;
+    		position: absolute;
+		}
+		.inline-separator {
+    		color: #707070;
+    		margin: 0 20px;
+		}
+		.primary-link {
+    		color: #27A7D4;
+    		line-height: 1.42857143;
+		}
+		.uploadBtnText {
+    		display: block;
+    		margin-left: 1px;
+    		margin-top: 8px;
+		}
+		.row .middle.focus+.right {
+    		display: block;
+		}
+		.row .right.info {
+    		color: #707070;
+		}
+		.row .right {
+    		width: 27%;
+    		padding-left: 3%;
+    		text-align: left;
+    		float: left;
+    		/*display: none;*/
+		}
+		.chkBoxLbl {
+    		font-size: smaller;
+    		padding: 0;
+    		color: #707070;
+		}
+		.customchkbox:checked+.customchkboxlbl::before {
+    		background-position: 0 -16px;
+		}
+		.chkBoxLbl .primary-link {
+    		color: #27A7D4;
+    		display: inline;
+    		font-size: inherit;
+    		font-weight: 100;
+    		line-height: 0;
+		}
+		.mailer-text {
+    		font-size: smaller;
+    		color: #707070;
+    		margin-left: 25px;
+		}
+		.submitBox {
+    		margin-top: 25px;
+    		text-align: center;
+		}
+		.primary-btn {
+    		background-color: #27A7D4;
+    		font-size: 16px;
+    		padding: 16px 130px;
+		}
+	</style>
+</head>
+
+<body>
+
+<header>	
+	<div class="top_Logo">
+
+    <a href="//www.naukari.com" class="nLogo">
+		  <img src="naukri_Logo.png" alt="Naukri.com, India's No.1 Job Site">
+    </a>
+
+		<p>Already Registered? <a href="http://login.naukri.com/" class="primary-link">Login</a> here</p>
+
+	</div>
+
+	<div  class="per">
+		<ul class="menu">
+			<li class="active"><div>Personal</div>
+				<em></em>
+			</li>
+			<li><div>Education</div>
+				<em></em>
+			</li>
+		</ul>
+	</div>
+</header>
+
+<main>
+	<div class="details">
+		
+		<form>
+
+		<div class="row">
+			<label class="left">Name</label>
+			<div class="middle">
+				<input type="text" name="" placeholder="Enter your full name">
+				<span class="errlable"></span>
+			</div>
+		</div>
+
+		<div class="row mail">
+			<label class="left mandatory">Email ID</label>
+			<div class="middle" style="position: relative;">
+				<div class="error err">
+					<div class="suggest">
+						<input type="email" name="" placeholder="Enter your active email id to receive relevant jobs">
+					</div>
+					<span class="errspan break">Please specify your email ID</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<label class="left mandatory">Create Password</label>
+			<div class="middle">
+				<div class="error err pass">
+					<input type="password" name="" placeholder="Mininum 6 characters">
+					<a href="" class="hidepwd">show</a>
+				</div>
+				<span class="errspan">Please specify a password</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="left mandatory">Mobile Number</label>
+			<div class="middle">
+				<div class="error err">
+					<input type="text" class="input code">
+					<input type="text" class="input mobile" placeholder="Where recruiter can contact you">
+					<div class="clrfix"></div>
+				</div>
+				<span class="errspan">Please specify a valid mobile number</span>
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="left mandatory">Current Location</label>
+			<div class="middle">
+				<div class="error">
+					<div class="ddwn">
+						<div class="DDwrap">
+							<ul class="DDsearch">
+								<li class="first" style="float: none">
+									<div class="DDinputwarp">
+										<label>
+											<span class="ddIcon"> <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+											<input type="text" name="" placeholder="If your city is not in the city,please select 'Others'">
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="info">
+					<input type="checkbox" class="customchkbox" name="outsideIndia">
+					<label for="outsideIndia" class="customchkboxlbl">Outside India</label>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="row">
+				<label class="left">Upload Resume</label>
+				<div class="middle uploadBtnCont focus">
+					<button type="button" class="uploadBtn">
+						<span>Upload Resume</span>
+					</button>
+
+					<span class="uploadCV">
+						<input type="file" multiple="multiple" accept=".pdf,.doc,.docx,.rtf" name="uploadCV">
+						<button>Upload</button>
+					</span>
+
+					<span class="inline-separator text-mute">- or -</span>
+					<a href="#" class="primary-link">copy-paste your resume here</a>
+
+					<small class="info uploadBtnText">doc, docx, rtf, pdf - 2MB max
+						<br>
+						Naukri preferred CV format - docx file
+					</small>
+				</div>
+
+				<div class="right info">
+					<span>Profiles with attached resumes are more likely to be viewed by recruiters.</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<label class="left"></label>
+			<div class="middle">
+				<div class="error">
+					<input type="checkbox" id="term">
+					<label for="term" class="customchkboxlbl chkBoxLbl">
+						I agreed to the 
+						<a href="//www.naukri.com/termsconditions#g1" target="_blank" class="primary-link">Terms and Conditions</a>
+						 governing the use of Naukri.com.
+					</label>
+
+					<div class="mailerText">
+						I have reviewed the default 
+						<a href="" class="primary-link">Mailer &amp; Communications settings.</a>
+					</div>
+
+					<span class="errspan"></span>
+
+					<div class="submitBox">
+						<button type="submit" class="primary-btn">Register Now</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		</form>
+	</div>
+</main>
+
+</body>
+</html>

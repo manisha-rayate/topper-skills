@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<!-- Prototype :-
+		- Prototype is an anonymous object created with each function.
+		- Each function has a property called 'prototype' to access the prototype object.
+		- Each prototype object has a constructor property to access the function for which the 
+		  object is created.
+		- Example :-
+
+		function f1() {
+
+		}
+
+		f1.prototype; // gives the prototype object of f1 function
+
+		f1.prototype.constructor; // gives the function f1
+
+		Q. Use of Prototype?
+		ans. Reusability is the main use of prototype. 
+ -->
+	<script>
+ 		
+ 		// Constructor function :- a Named function which is being used to create and initilize objects is called constructor function.
+ 		// - Example :-
+
+ 		function Employee(name, city)
+ 		{
+ 			this.name = name;
+ 			this.city = city;
+ 			// this.comp = "ABC";
+ 		}
+
+ 		Employee.prototype.comp = "ABC";
+
+ 		Employee.prototype.profile = function()
+ 									{
+ 										return `Name: ${this.name}, City: ${this.city}, Company: ${this.comp}`
+ 									};
+ 		//Object creation :-
+
+ 		const em1 = new Employee("abc", "Pune");
+ 		const em2 = new Employee("xyz", "Mumbai");
+ 		const em3 = new Employee("def", "Satara");
+ 		const em4 = new Employee("pdf", "Nashik");
+
+ 		console.log(em1);
+// 		console.log(em1.comp);
+ 		console.log(em2);
+ 		console.log(em3);
+ //		console.log(em3.comp);
+ 		console.log(em4);
+
+ 		em1.profile = function(){
+ 						return `Name: ${this.name}, City: ${this.city}, Company: ${this.comp}`	
+ 		};
+
+ 		// console.log(em1.profile());
+ 		// console.log(em2.profile());
+
+ 		// // Prototype Chaining :-
+
+ 		// console.log(em1.profile());
+ 		// console.log(em1.__proto__.profile());
+ 		// // // console.log(em1.__proto__.__proto__.profile());		// typeError : Profile() not available in Object function. 
+ 		// console.log(em1.__proto__.__proto__);
+ 		// console.log(Object.getPrototypeOf(em1).profile());
+
+ 		// // There are three phases in object creation:-
+
+ 		// // - 1. declaration
+ 		// // - 2. instantiation
+ 		// // - 3. initialization
+ 		
+//--------------------------------------------------------------------------------------------------
+
+ 		// function f1()
+ 		// {
+
+ 		// }
+ 		// console.log(f1);
+ //------------------------------------------------------------------------------------------------
+ 	</script> 
+
+
+</body>
+</html>

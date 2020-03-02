@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu using CSS Selector</title>
+	<style>
+		
+		.menu{
+			list-style-type: none;
+			background-color: #000;
+		}
+		.menu li{
+			display: inline-block;
+			line-height: 25px;
+		}
+		.menu li a{
+			width: 100px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			text-align: center;
+			padding: 20px 20px;
+			display: inline-block;
+		}
+		div{
+			display: none;
+		}
+		.menu a:hover + div{
+			background-color: #50504c;
+			display: block;
+
+		}
+		menu a + div{
+			display: block;
+			position: absolute;
+			background-color: #fff;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+
+	<ul class="menu">
+		<li><a href="#">Home</a>
+			<div class="abc">
+				Topper Skills, Pune.
+			</div>
+		</li>
+		<li><a href="#">About</a></li>
+			<div>
+				Extend your skills set with proven & genuine knowledge!
+			</div>
+		<li><a href="#">Training</a></li>
+			<div>
+				<ul>
+					<li>C & C++</li>
+					<li>Android</li>
+					<li>HTML & CSS</li>
+					<li>Angularjs & Nodejs</li>
+					<li>Java</li>
+				</ul>
+				
+			</div>
+		<li><a href="#">Services</a>
+			<div>
+				<ul>
+					<li>abc</li>
+					<li>pqr</li>
+					<li>xyz</li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#">Placements</a>
+			<div>
+				<ul>
+					<li>Job Opening</li>
+					<li>Campus Events</li>
+					<li>Clients</li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="#">Contact Us</a>
+			<div>
+				Topper Skills Institute,
+				Pune.
+			</div>
+		</li>
+	</ul>
+
+</body>
+</html>

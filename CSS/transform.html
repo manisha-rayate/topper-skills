@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS transform property</title>
+
+	<style>
+		
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: cyan;
+			border: 2px solid #000;
+			margin: 200px 200px;
+		}
+		div:hover{
+			/* rotation:-
+			transform rotate: +ve and z-axis(default):clockwise ratotaion, -ve:anti-clockwise rotation; ;
+			transform: rotate(90deg);
+
+			transform: rotateX(45deg);
+			transform: rotateZ(30deg);	
+			----------------------------------------------------------------------------------------*/
+			
+			/*transform:scale(2,2,2):-bydefault size is 1 means 100px, .5 means half of current size, 2 		means double of current size. By default conside x and y axis. 
+
+			transform: scale3d(2,2,2);
+			/*transform: scaleX(2);
+			transform: scaleY(2);
+			transform: scaleZ(2);
+			----------------------------------------------------------------------------------------*/
+			
+			/*transform:skew():- By default consider x axis.
+			transform: skewX(45deg);
+			transform: skewY(50deg);*/
+			transform: skew(45deg);
+			/*
+			---------------------------------------------------------------------------------------
+			/*translate:- move the element from its current position.*/
+			/*transform: translate(100px,100px); 	*/
+			/*transform: translate(-100px,-50px);*/
+			/*transform: translateX(200px);
+			transform: translateY(100px);
+			transform: translateZ(200px);*/
+		}
+	</style>
+</head>
+<body>
+	<div>
+		Topper Skills
+	</div>
+
+</body>
+</html>
